@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>दक्ष पोलीस प्रशिक्षण केंद्र, लातूर</title>
+<link rel="icon" href="new logo.jpg" type="image/x-icon" />
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<script src="script.js" defer></script>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<meta name="description" content="दक्ष पोलीस व सैन्य भरती पूर्व प्रशिक्षण केंद्र, लातूर." />
+<meta name="keywords" content="HTML, CSS, Responsive Navbar, JavaScript" />
+<meta name="author" content="Satyavan Kamble" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+<meta name="description" content="दक्ष पोलीस व सैन्य भरती पूर्व प्रशिक्षण केंद्र, लातूर - पोलीस प्रशिक्षणासाठी उत्कृष्टता आणि समर्पण." />
+
+</head>
+<body>
+<!-- Header -->
+  <header class="header" >
+    <div class="main-header">
+      <!-- Left Logo -->
+      <div class="logo-single">
+        <img src="new logo.jpg" alt="Left Logo" />
+      </div>
+
+      <!-- Center Info -->
+      <div class="institute-info">
+        <div class="institute-name">
+          दक्ष पोलीस व सैन्य भरती पूर्व प्रशिक्षण केंद्र, लातूर
+        </div>
+        <div class="institute-subtitle">
+         शासन मान्य :रजि. नं: MAH/189/17/F24456LTR
+        </div>
+      </div>
+
+      <!-- Right Logo -->
+      <div class="logo-single">
+        <img src="new logo.jpg" alt="Right Logo" />
+      </div>
+    </div>
+  </header>
+  
+
+  <!-- Navbar -->
+  <div class="sticky-container">
+    <nav class="navbar">
+      <button class="menu-toggle" onclick="toggleMenu(this)">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">मुखपृष्ठ</a></li>
+        <li><a href="#about">आमच्याबद्दल</a></li>
+        <li><a href="#courses">कोर्सेस</a></li>
+        <li><a href="#gallery">गॅलरी</a></li>
+        <li><a href="#contact">संपर्क</a></li>
+      </ul>
+    </nav>
+  </div>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+const links = document.querySelectorAll('.nav-links a');
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+}); 
+if (window.innerWidth <= 768) {
+  navLinks.classList.add('mobile');
+} else {
+  navLinks.classList.remove('mobile');
+}
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 768) {
+    navLinks.classList.add('mobile');
+  } else {
+    navLinks.classList.remove('mobile');
+  }
+});
+
+</script>
+<section id="hero" aria-label="मुख्य प्रतिमा स्लायडर">
+  <div class="hero-slider" aria-live="polite" aria-atomic="true" aria-relevant="additions removals">
+    <img src="Anju.jpg" alt="पोलीस प्रशिक्षण केंद्रातील दृश्य २" class="hero-slide" loading="lazy" />
+    <img src="IMG_3920 copy.jpg" alt="पोलीस प्रशिक्षण केंद्रातील दृश्य १" class="hero-slide active" loading="lazy" />
+    <img src="new logo.jpg" alt="पोलीस प्रशिक्षण केंद्रातील दृश्य ३" class="hero-slide" loading="lazy" />
+    <button id="prevSlide" aria-label="मागील स्लायड">◀</button>
+    <button id="nextSlide" aria-label="पुढील स्लायड">▶</button>
+  </div>
+</section>
+
+<section id="about">
+  <img src="new logo.jpg" alt="पोलीस प्रशिक्षण केंद्र" loading="lazy" />
+  <div class="about-text">
+    <h2>आमच्या विषयी</h2>
+    <p>
+      दक्ष पोलीस प्रशिक्षण केंद्र, लातूर हे अत्याधुनिक सुविधा आणि अनुभवी प्रशिक्षकांनी भरलेले आहे. आमच्या केंद्रात प्रशिक्षित पोलीस अधिकारी आपल्या कर्तव्यांमध्ये कुशल आणि जबाबदार बनण्यासाठी प्रत्येक संधी मिळतात.
+      आम्ही सदैव पारंपरिक मूल्यांचा सन्मान करून आधुनिक तंत्रज्ञानाचा वापर करून प्रशिक्षण देतो.
+    </p>
+  </div>
+</section>
+<section id="mission" aria-label="मिशन">
+  <h2>आमचे मिशन</h2>
+  <p>
+    दक्ष पोलीस प्रशिक्षण केंद्राचे मिशन म्हणजे उत्कृष्ट पोलीस अधिकारी तयार करणे जे समाजाच्या सुरक्षेसाठी आणि न्यायव्यवस्थेच्या कार्यक्षमतेसाठी प्रतिबद्ध असतात.
+    आमचे ध्येय म्हणजे शिस्त, नैतिकता आणि तंत्रज्ञानाच्या आधारे प्रशिक्षित अधिकारी तयार करणे.
+  </p>
+</section>
+<section id="vision" aria-label="दृष्टी">
+  <h2>आमची दृष्टी</h2>
+  <p>
+    दक्ष पोलीस प्रशिक्षण केंद्राची दृष्टी म्हणजे एक सुरक्षित आणि शांत समाज तयार करणे जिथे पोलीस अधिकारी त्यांच्या कर्तव्यांमध्ये सक्षम आणि विश्वासार्ह असतात.
+    आमच्या प्रशिक्षण कार्यक्रमाद्वारे, आम्ही पोलीस सेवेत नाविन्य, पारदर्शकता आणि लोकशाही मूल्यांचे पालन करण्याचा प्रयत्न करतो.
+  </p>
+</section>
+<section id="staff" aria-label="कर्मचारी">
+  <h2>कर्मचारी</h2>
+  <div class="card-grid">
+    <article class="card" tabindex="0">
+      <img src="IMG_3920 copy.jpg" alt="सत्यवान कांबळे" loading="lazy" />
+      <h3>सत्यवान कांबळे</h3>
+      <p>प्रशिक्षण प्रमुख</p>
+    </article>
+
+    <article class="card" tabindex="0">
+      <img src="Anju.jpg" alt="सत्यवान कांबळे" loading="lazy" />
+      <h3>अधिकारी अंजली कांबळे</h3>
+      <p>शिस्त अधिकारी</p>
+    </article>
+
+    <article class="card" tabindex="0">
+      <img src="Anju.jpg" alt="सत्यवान कांबळे" loading="lazy" />
+      <h3>अधिकारी अंजली कांबळे</h3>
+      <p>शिस्त अधिकारी</p>
+    </article>
+  </div>
+</section>
+
+<section id="courses" aria-label="अभ्यासक्रम" class="courses-section">
+  <h2>अभ्यासक्रम</h2>
+  <div class="courses-container">
+
+    <div class="course-card">
+      <img src="police.png" alt="कौर्स १ चे चित्र" />
+      <h3>कौर्स १</h3>
+      <p>हा कौर्स पोलीस प्रशिक्षणासाठी आवश्यक आहे.</p>
+      <button>अधिक माहिती</button>
+    </div>
+
+    <div class="course-card">
+      <img src="army.jpg" alt="कौर्स २ चे चित्र" />
+      <h3>कौर्स २</h3>
+      <p>हा कौर्स पोलीस प्रशिक्षणासाठी आवश्यक आहे..</p>
+      <button>अधिक माहिती</button>
+    </div>
+
+    <div class="course-card">
+      <img src="bsf.jpg" alt="कौर्स ३ चे चित्र" />
+      <h3>कौर्स ३</h3>
+      <p>हा कौर्स पोलीस प्रशिक्षणासाठी आवश्यक आहे..</p>
+      <button>अधिक माहिती</button>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="notices" aria-label="सूचना">
+  <h2>सूचना</h2>
+  <ul>
+    <li tabindex="0">
+      नवीन भरतीसाठी अर्ज प्रक्रिया सुरू आहे. अंतिम तारीख १५ जुलै २०२५.
+      <time datetime="2025-06-01">01 जून 2025</time>
+    </li>
+    <li tabindex="0">
+      आगामी प्रशिक्षण वर्ग १ ऑगस्ट २०२५ पासून सुरू होणार आहे.
+      <time datetime="2025-06-02">02 जून 2025</time>
+    </li>
+    <li tabindex="0">
+      केंद्रात नवीन शैक्षणिक उपकरणे स्थापित करण्यात आली आहेत.
+      <time datetime="2025-05-25">25 मे 2025</time>
+    </li>
+  </ul>
+</section>
+
+ <!-- Gallery Section -->
+  <section id="gallery" aria-label="फोटो
+गॅलरी">
+ <div class="gallery-container">
+    <h2 class="gallery-title">फोटो
+गॅलरी</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('Anju.jpg', 'दक्ष पोलीस व सैन्य भरती पूर्व प्रशिक्षण  येथून PSI या पदी निवड झालेली विद्यार्थी....')">
+            <img src="Anju.jpg" alt="Nature">
+            <div class="gallery-caption">दक्ष पोलीस व सैन्य भरती पूर्व प्रशिक्षण  येथून PSI या पदी निवड झालेली विद्यार्थी...</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('IMG_3920 copy.jpg', 'दक्ष पोलीस व सैन्य भरती पूर्व प्रशिक्षण केंद्रातील दृश्य.')">
+            <img src="IMG_3920 copy.jpg" alt="City">
+            <div class="gallery-caption">दक्ष पोलीस व सैन्य भरती पूर्व प्रशिक्षण केंद्रातील दृश्य.</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('new logo.jpg', 'दक्ष पोलीस व सैन्य भरती पूर्व प्रशिक्षण केंद्राचे नवीन लोगो.')">
+            <img src="new logo.jpg" alt="Logo">
+            <div class="gallery-caption">दक्ष पोलीस व सैन्य भरती पूर्व प्रशिक्षण केंद्राचे नवीन लोगो.</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('police.png', 'पोलीस प्रशिक्षण केंद्रातील पोलीस अधिकारी.')">
+            <img src="police.png" alt="Police Training">
+            <div class="gallery-caption">पोलीस प्रशिक्षण केंद्रातील पोलीस अधिकारी.</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('army.jpg', 'पोलीस प्रशिक्षण केंद्रातील सैन्य भरती पूर्व प्रशिक्षण.')">
+            <img src="army.jpg" alt="Army Training">
+            <div class="gallery-caption">पोलीस प्रशिक्षण केंद्रातील सैन्य भरती पूर्व प्रशिक्षण.</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('bsf.jpg', 'BSF भरती पूर्व प्रशिक्षण केंद्रातील दृश्य.')">
+            <img src="bsf.jpg" alt="BSF Training">
+            <div class="gallery-caption">BSF भरती पूर्व प्रशिक्षण केंद्रातील दृश्य.</div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Expanded Image">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<section id="success-students" aria-label="यशस्वी विद्यार्थी">
+  <h2>यशस्वी विद्यार्थी</h2>
+  <div class="card-grid">
+    <article class="card" tabindex="0">
+      <img src="IMG_3920 copy.jpg" alt="सत्यवान कांबळे" loading="lazy" />
+      <h3>सत्यवान कांबळे</h3>
+      <p>२०२३ मध्ये सर्वोत्तम प्रशिक्षित विद्यार्थी.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <img src="Anju.jpg" alt="अंजली कांबळे" loading="lazy" />
+      <h3>अंजली कांबळे</h3>
+      <p>सुरक्षा क्षेत्रात उल्लेखनीय कार्य .</p>
+    </article>
+  </div>
+</section>
+
+<section id="contact" aria-label="संपर्क करा">
+ 
+  <!--form id="contactForm" aria-describedby="formDesc" novalidate>
+    <p id="formDesc" class="sr-only">संपर्क फॉर्म भरा आणि पाठवा. सर्व फील्ड्स आवश्यक आहेत.</p>
+    <label for="name">नाव</label>
+    <input type="text" id="name" name="name" required placeholder="तुमचे पूर्ण नाव" />
+    
+    <label for="email">ई-मेल</label>
+    <input type="email" id="email" name="email" required placeholder="उदाहरण@domain.com" />
+    
+    <label for="phone">फोन नंबर</label>
+    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="१० अंकी नंबर" title="१० अंकी फोन नंबर द्या" />
+    
+    <label for="subject">विषय</label>
+    <select id="subject" name="subject" required>
+      <option value="">-- विषय निवडा --</option>
+      <option value="general">सामान्य चौकशी</option>
+      <option value="admission">भरती संबंधित</option>
+      <option value="training">प्रशिक्षण</option>
+      <option value="other">इतर</option>
+    </select>
+    
+    <label for="message">संदेश</label>
+    <textarea id="message" name="message" rows="4" required placeholder="तुमचा संदेश येथे लिहा"></textarea>
+    
+    <button type="submit">पाठवा</button>
+  </form-->
+  
+  <section aria-label="संपर्क माहिती">
+  <section aria-label="संपर्क माहिती" class="contact-section">
+  <div class="contact-container">
+
+    <div class="contact-info">
+      <h2>संपर्क</h2>
+      <p><strong>पत्ता:</strong> दक्ष अकॅडमी, आर.टी.ओ. ऑफिस जवळ, बाभळगांव रोड, लातूर - ४१३५१२</p>
+      <p><strong>फोन:</strong> +91 7720020100 , 7498866749</p>
+      <p><strong>ई-मेल:</strong> dakshpoliceacadmylatur@gmail.com</p>
+    </div>
+
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173841.95540959886!2d76.61330250000002!3d18.3914085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf83173b1da137%3A0x17339dc754158c5a!2sDakshy%20Police%20Bharti%20Purv%20Prshikshn%20Kendra%2C%20Latur77!5e1!3m2!1sen!2sin!4v1748972218047!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+</section>
+
+<footer>
+  © 2025 दक्ष पोलीस प्रशिक्षण केंद्र, लातूर | सर्व हक्क राखीव
+  @Developed by  Satyavan Kambale
+
+</footer>
+
+<script>
+  // Hero slider logic
+  const slides = document.querySelectorAll('.hero-slide');
+  let current = 0;
+  let slideInterval = setInterval(nextSlide, 6000);
+
+  const prevBtn = document.getElementById('prevSlide');
+  const nextBtn = document.getElementById('nextSlide');
+
+  function nextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+  function prevSlideFunc() {
+    slides[current].classList.remove('active');
+    current = (current - 1 + slides.length) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  prevBtn.addEventListener('click', () => {
+    prevSlideFunc();
+    resetInterval();
+  });
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetInterval();
+  });
+
+  function resetInterval() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 6000);
+  }
+
+  /** Contact form validation
+  //const contactForm = document.getElementById('contactForm');
+  //contactForm.addEventListener('submit', (e) => {
+    if (!contactForm.checkValidity()) {
+      e.preventDefault();
+      alert('कृपया सर्व आवश्यक फील्ड्स योग्यरीत्या भरा.');
+    }
+  });**/
+</script>
+
+</body>
+</html>
