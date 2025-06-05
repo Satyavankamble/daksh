@@ -1,0 +1,119 @@
+/* Full screen setup */
+  #loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Loader bars container */
+  .bar-loader {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* Individual bars */
+  .bar {
+    width: 40px;
+    height: 100px;
+    border-radius: 10px;
+    animation: pulseHeight 1.6s ease-in-out infinite;
+  }
+
+  .bar:nth-child(1) {
+    background-color: #FF9933; /* केशरी */
+    animation-delay: 0s;
+  }
+  .bar:nth-child(2) {
+    background-color: #FFFFFF; /* पांढरा */
+    border: 2px solid #000;
+    animation-delay: 0.3s;
+  }
+  .bar:nth-child(3) {
+    background-color: #138808; /* हिरवा */
+    animation-delay: 0.6s;
+  }
+
+  @keyframes pulseHeight {
+    0%, 100% {
+      height: 100px;
+      opacity: 0.4;
+      transform: scaleY(1);
+    }
+    50% {
+      height: 140px;
+      opacity: 1;
+      transform: scaleY(1.3);
+    }
+  }
+
+  /* Responsive for mobile */
+  @media (max-width: 480px) {
+    .bar {
+      width: 25px;
+      height: 70px;
+      border-radius: 6px;
+    }
+  }
+
+  /* Main content hidden initially */
+  #content {
+    display: none;
+    padding: 20px;
+    font-size: 20px;
+    color: #222;
+    font-family: Arial, sans-serif;
+  }
+  
+
+
+  /* Internet Connection onlne / Offline check */
+
+   #statusMessage {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      user-select: none;
+      max-width: 90vw;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    #statusMessage.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+    #statusMessage.offline {
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      transform: translateX(-50%) translateY(-20px);
+    }
+    #statusMessage.online {
+      background: linear-gradient(135deg, #27ae60, #2ecc71);
+      transform: translateX(-50%) translateY(-20px);
+    }
+    #statusMessage img {
+      width: 24px;
+      height: 24px;
+    }

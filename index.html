@@ -6,6 +6,7 @@
 <title>दक्ष पोलीस प्रशिक्षण केंद्र, लातूर</title>
 <link rel="icon" href="new logo.jpg" type="image/x-icon" />
 <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="loader.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <script src="script.js" defer></script>
  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;700&display=swap" rel="stylesheet">
@@ -16,9 +17,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 <meta name="description" content="दक्ष पोलीस व सैन्य भरती पूर्व प्रशिक्षण केंद्र, लातूर - पोलीस प्रशिक्षणासाठी उत्कृष्टता आणि समर्पण." />
-
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="Satyavan Kambale">
+<meta name="keywords" content="दक्ष पोलीस, सैन्य भरती, प्रशिक्षण केंद्र, लातूर, पोलीस भरती, सैन्य भरती, पोलीस प्रशिक्षण">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<!-- Loader -->
+<div id="loader">
+  <div class="bar-loader">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <div>Loading...<br>
+  दक्ष पोलीस प्रशिक्षण केंद्र, लातूर</div>
+</div>
+
+<!----Internet Connection online / Offline Check-->
+ <div id="statusMessage">
+    <img id="statusIcon" src="" alt="Status Icon" />
+    <span id="statusText"></span>
+  </div>
+
 <!-- Header -->
   <header class="header" >
     <div class="main-header">
@@ -45,60 +69,36 @@
   </header>
   
 
-  <!-- Navbar -->
-  <div class="sticky-container">
-    <nav class="navbar">
-      <button class="menu-toggle" onclick="toggleMenu(this)">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#home">मुखपृष्ठ</a></li>
-        <li><a href="#about">आमच्याबद्दल</a></li>
-        <li><a href="#courses">कोर्सेस</a></li>
-        <li><a href="#gallery">गॅलरी</a></li>
-        <li><a href="#contact">संपर्क</a></li>
-      </ul>
-    </nav>
+ <nav class="navbar">
+  <div class="container">
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#">Home</a></li>
+      <li class="has-dropdown">
+        <a href="#">Courses</a>
+        <ul class="dropdown">
+          <li><a href="#">Police Bharti</a></li>
+          <li><a href="#">Army Bharti</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
   </div>
+</nav>
 
+<!-- SCRIPT -->
 <script>
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-const links = document.querySelectorAll('.nav-links a');
-links.forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
   });
-}); 
-if (window.innerWidth <= 768) {
-  navLinks.classList.add('mobile');
-} else {
-  navLinks.classList.remove('mobile');
-}
-window.addEventListener('resize', () => {
-  if (window.innerWidth <= 768) {
-    navLinks.classList.add('mobile');
-  } else {
-    navLinks.classList.remove('mobile');
-  }
-});
-
 </script>
-<section id="hero" aria-label="मुख्य प्रतिमा स्लायडर">
-  <div class="hero-slider" aria-live="polite" aria-atomic="true" aria-relevant="additions removals">
-    <img src="Anju.jpg" alt="पोलीस प्रशिक्षण केंद्रातील दृश्य २" class="hero-slide" loading="lazy" />
-    <img src="IMG_3920 copy.jpg" alt="पोलीस प्रशिक्षण केंद्रातील दृश्य १" class="hero-slide active" loading="lazy" />
-    <img src="new logo.jpg" alt="पोलीस प्रशिक्षण केंद्रातील दृश्य ३" class="hero-slide" loading="lazy" />
-    <button id="prevSlide" aria-label="मागील स्लायड">◀</button>
-    <button id="nextSlide" aria-label="पुढील स्लायड">▶</button>
-  </div>
-</section>
+
 
 <section id="about">
   <img src="new logo.jpg" alt="पोलीस प्रशिक्षण केंद्र" loading="lazy" />
@@ -304,10 +304,39 @@ window.addEventListener('resize', () => {
   </div>
 </section>
 </section>
+ <!-- Social Media Floating Buttons -->
+  <div class="social-buttons">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919370631695?text=Hello%2C%20I%20am%20interested%20in%20your%20academy" target="_blank" style="background-color:#25D366;">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/yourprofile" target="_blank" style="background-color:#E1306C;">
+      <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram">
+    </a>
+
+    <!-- YouTube >
+    <a href="https://youtube.com/yourchannel" target="_blank" style="background-color:#FF0000;">
+      <img src="https://img.icons8.com/fluency/48/youtube-play.png" alt="YouTube">
+    </a>
+
+    < Twitter >
+    <a href="https://twitter.com/yourhandle" target="_blank" style="background-color:#1DA1F2;">
+      <img src="https://img.icons8.com/color/48/twitter--v1.png" alt="Twitter">
+    </a>
+
+    <!Telegram >
+    <a href="https://t.me/yourtelegram" target="_blank" style="background-color:#0088cc;">
+      <img src="https://img.icons8.com/color/48/telegram-app--v1.png" alt="Telegram">
+    </a-->
+    
+  </div>
 
 <footer>
-  © 2025 दक्ष पोलीस प्रशिक्षण केंद्र, लातूर |
-  @Developed by  Satyavan Kamble
+  © 2025 दक्ष पोलीस प्रशिक्षण केंद्र, लातूर | सर्व हक्क राखीव
+  @Developed by  Satyavan Kambale
 
 </footer>
 
